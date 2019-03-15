@@ -1,4 +1,4 @@
-package FstExample.staff;
+package fst.ex.staff;
 
 import java.util.ArrayList;
 import java.util.List;

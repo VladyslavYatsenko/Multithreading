@@ -1,8 +1,8 @@
-package FstExample.app;
+package fst.ex.app;
 
-import FstExample.kitchen.Kitchen;
-import FstExample.server.Server;
-import FstExample.staff.Staff;
+import fst.ex.kitchen.Kitchen;
+import fst.ex.server.Server;
+import fst.ex.staff.Staff;
 
 public class MainApp {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package FstExample.kitchen;
+package fst.ex.kitchen;
 
-import FstExample.staff.Staff;
+import fst.ex.staff.Staff;
 
 public class Kitchen implements Runnable {
     private Staff staff;

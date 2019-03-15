@@ -1,4 +1,4 @@
-package SndExample;
+package snd.example;
 
 public class Consumer implements Runnable {
     private static int taskCount = 0;
@@ -9,21 +9,12 @@ public class Consumer implements Runnable {
         this.store = store;
     }
 
-    public void buyProduct() {
-        try {
-            store.getProductList().take();
-            System.out.println(status() + " Bought product");
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 
     @Override
     public void run() {
-        buyProduct();
         try {
-            Thread.sleep(5000);
+            store.sellProduct();
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -32,5 +23,9 @@ public class Consumer implements Runnable {
 
     public String status() {
         return "Consumer# " + id;
+    }
+
+    public int getId() {
+        return id;
     }
 }

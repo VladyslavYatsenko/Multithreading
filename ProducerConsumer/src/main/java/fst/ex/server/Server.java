@@ -1,6 +1,6 @@
-package FstExample.server;
+package fst.ex.server;
 
-import FstExample.staff.Staff;
+import fst.ex.staff.Staff;
 
 public class Server implements Runnable {
     private Staff staff;

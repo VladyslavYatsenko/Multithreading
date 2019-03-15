@@ -1,4 +1,4 @@
-package SndExample;
+package snd.example;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

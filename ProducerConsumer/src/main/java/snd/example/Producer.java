@@ -1,4 +1,4 @@
-package SndExample;
+package snd.example;
 
 
 public class Producer implements Runnable {
@@ -10,19 +10,11 @@ public class Producer implements Runnable {
         this.store = store;
     }
 
-    public void addProduct() {
-        Product product = new Product(Math.random()*100, new StringGenerator().generateString());
-        store.getProductList().add(product);
-        System.out.println(status() + "Product was added" + product.toString());
-
-    }
-
     @Override
     public void run() {
-        addProduct();
-
         try {
-            Thread.sleep(5000);
+            store.addProduct();
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -30,5 +22,9 @@ public class Producer implements Runnable {
 
     public String status() {
         return "Producer# " + id;
+    }
+
+    public int getId() {
+        return id;
     }
 }
